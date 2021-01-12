@@ -18,6 +18,8 @@ Mail script that allows to send a mail with a file
 
 * If you want to add a file, you can type the relative path or full path
 * If you dont want to add a file, leave the field empty
+![bash](./images/bash.png?raw=true "Exemple d'utilisation du script")
+![mail](./images/mail.png?raw=true "Exemple de mail")
 
 ## Author
 * DAUDET Franck
