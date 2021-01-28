@@ -1,7 +1,6 @@
 #!/bin/bash
 # Simple Mail Script using MailGun API
 Api_KEY=api:<APINUMBER>
-MAILGUN_MAIL=<postmaster@MAILGUN_MAIL.mailgun.org>
 MAILGUN_DOMAIN=<DOMAIN>
 echo "   _____ _                 _        __  __       _ _    _____           _       _   "
 echo "  / ____(_)               | |      |  \/  |     (_) |  / ____|         (_)     | |  "
@@ -20,21 +19,19 @@ read sujet
 echo -n "Mail body : "
 read txt
 echo -n "File : "
-    read file
-
+read file
 
 if [[ -z "$file" ]]; then
     curl -s --user $Api_KEY \
         https://api.mailgun.net/v3/"$MAILGUN_DOMAIN"/messages \
-        -F from=$MAIL \
+        -F from=postmaster@$MAILGUN_DOMAIN \
         -F to=$email \
         -F subject="$sujet" \
-        -F text="$txt" \
-    echo "1"
+        -F text="$txt"
 else
     curl -s --user $Api_KEY \
         https://api.mailgun.net/v3/"$MAILGUN_DOMAIN"/messages \
-        -F from=$MAIL \
+        -F from=postmaster@$MAILGUN_DOMAIN  \
         -F to=$email \
         -F subject="$sujet" \
         -F text="$txt" \
