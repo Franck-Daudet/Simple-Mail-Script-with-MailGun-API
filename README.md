@@ -3,7 +3,7 @@ Mail script that allows to send a mail with a file
 
 ## Set Up
 
-* Change Api_KEY, MAILGUN_MAIL, MAILGUN_DOMAIN value between < >
+* Change Api_KEY, MAILGUN_DOMAIN value between < >
 * Make .sh file executable and make an alias so you can use it whenever you want :
     ```bash
     chmod +x PATH_TO_FILE\mail.sh
